@@ -26,3 +26,11 @@
 /Users/leviapp/Desktop/4444/Projects/Rex/obj/Debug/net5.0/ref/Rex.dll
 /Users/leviapp/Desktop/4444/Projects/Rex/obj/Debug/net5.0/Rex.pdb
 /Users/leviapp/Desktop/4444/Projects/Rex/obj/Debug/net5.0/Rex.genruntimeconfig.cache
+/Users/leviapp/Desktop/4444/Projects/Rex/bin/Debug/net5.0/Humanizer.dll
+/Users/leviapp/Desktop/4444/Projects/Rex/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
+/Users/leviapp/Desktop/4444/Projects/Rex/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/leviapp/Desktop/4444/Projects/Rex/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/leviapp/Desktop/4444/Projects/Rex/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/leviapp/Desktop/4444/Projects/Rex/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/leviapp/Desktop/4444/Projects/Rex/bin/Debug/net5.0/Npgsql.dll
+/Users/leviapp/Desktop/4444/Projects/Rex/bin/Debug/net5.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

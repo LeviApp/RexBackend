@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Rex.Data;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace Rex
 {
@@ -26,8 +29,14 @@ namespace Rex
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<RexContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("RexConnection")));
 
             services.AddControllers();
+
+            // services.AddScoped<IRexRepo, MockRexRepo>();
+
+            services.AddScoped<IRexRepo, PostRexRepo>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Rex", Version = "v1" });
