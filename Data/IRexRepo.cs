@@ -9,7 +9,7 @@ namespace Rex.Data
         Lesson GetIndividualLesson(int id);
         void CreateLesson(Lesson less);
         void UpdateLesson(Lesson less);
-
+        void DeleteLesson(Lesson less);
 
     }
 }
