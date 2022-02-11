@@ -4,9 +4,9 @@ namespace Rex.Data
 {
     public interface IRexRepo
     {
+        bool SaveChanges();
         IEnumerable<Lesson> GetLessons();
-
         Lesson GetIndividualLesson(int id);
-
+        void CreateLesson(Lesson less);
     }
 }

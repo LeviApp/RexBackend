@@ -41,6 +41,15 @@ namespace Rex.Data
 
         }
 
+        public bool SaveChanges()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CreateLesson(Lesson less)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
 
