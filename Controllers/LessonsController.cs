@@ -4,6 +4,7 @@ using Rex.Models;
 using Rex.Data;
 using AutoMapper;
 using Rex.Dtos;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace Rex.Controllers
 {
@@ -70,5 +71,34 @@ namespace Rex.Controllers
 
             return NoContent();
         }
+
+        [HttpPatch("{id}")]
+        public ActionResult PatchLesson(int id, JsonPatchDocument<LessonUpdateDto> patchDoc)
+        {
+            
+            var repoLesson = _repo.GetIndividualLesson(id);
+
+            if (repoLesson == null) {
+                return NotFound();
+            }
+
+            var lessonToPatch = _mapper.Map<LessonUpdateDto>(repoLesson);
+
+            patchDoc.ApplyTo(lessonToPatch, ModelState);
+
+            if(!TryValidateModel(lessonToPatch))
+            {
+                return ValidationProblem(ModelState);
+            }
+
+            _mapper.Map(lessonToPatch, repoLesson);
+            
+            _repo.UpdateLesson(repoLesson);
+
+            _repo.SaveChanges();
+
+            return NoContent();
+        }
+
     }
 }

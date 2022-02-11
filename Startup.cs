@@ -14,7 +14,7 @@ using Microsoft.OpenApi.Models;
 using Rex.Data;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
-
+using Newtonsoft.Json.Serialization;
 namespace Rex
 {
     public class Startup
@@ -31,7 +31,9 @@ namespace Rex
         {
             services.AddDbContext<RexContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("RexConnection")));
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(s => {
+                s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             // services.AddScoped<IRexRepo, MockRexRepo>();
