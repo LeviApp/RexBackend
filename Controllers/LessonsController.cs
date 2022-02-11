@@ -52,5 +52,23 @@ namespace Rex.Controllers
 
             return CreatedAtRoute(nameof(GetIndividualLesson), new {Id = lessonReadDto.LessonNumber}, lessonCreateDto);
         }
+
+        [HttpPut("{id}")]
+        public ActionResult UpdateLesson(int id, LessonUpdateDto lessonUpdateDto)
+        {
+            var repoLesson = _repo.GetIndividualLesson(id);
+
+            if (repoLesson == null) {
+                return NotFound();
+            }
+
+            _mapper.Map(lessonUpdateDto, repoLesson);
+
+            _repo.UpdateLesson(repoLesson);
+
+            _repo.SaveChanges();
+
+            return NoContent();
+        }
     }
 }

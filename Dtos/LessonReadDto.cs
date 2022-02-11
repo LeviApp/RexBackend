@@ -5,9 +5,6 @@ namespace Rex.Dtos
 {
     public record LessonReadDto
     {
-        [Key]
-        public int LessonId { get; init; }
-
         [Required]
         public int LessonNumber {get; init;}
 

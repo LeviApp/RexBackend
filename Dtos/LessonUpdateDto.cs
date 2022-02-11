@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Rex.Dtos
 {
-    public record LessonCreateDto
+    public record LessonUpdateDto
     {
         [Required]
         public int LessonNumber {get; init;}

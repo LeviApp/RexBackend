@@ -10,6 +10,7 @@ namespace Rex.Profiles
         {
             CreateMap<Lesson, LessonReadDto>();
             CreateMap<LessonCreateDto, Lesson>();
+            CreateMap<LessonUpdateDto, Lesson>();
         }
     }
 }

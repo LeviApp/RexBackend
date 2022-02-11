@@ -8,5 +8,8 @@ namespace Rex.Data
         IEnumerable<Lesson> GetLessons();
         Lesson GetIndividualLesson(int id);
         void CreateLesson(Lesson less);
+        void UpdateLesson(Lesson less);
+
+
     }
 }
