@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Rex.Models;
@@ -12,6 +13,17 @@ namespace Rex.Data
         {
             _context = context;
         }
+
+        public void CreateLesson(Lesson less)
+        {
+            if (less == null) 
+            {
+                throw new ArgumentNullException(nameof(less));
+            }
+            
+            _context.Lessons.Add(less);
+        }
+
         public Lesson GetIndividualLesson(int id)
         {
             return _context.Lessons.FirstOrDefault(l => l.LessonNumber == id);
@@ -20,6 +32,11 @@ namespace Rex.Data
         public IEnumerable<Lesson> GetLessons()
         {
             return _context.Lessons.ToList();
+        }
+
+        public bool SaveChanges()
+        {
+            return (_context.SaveChanges() >= 0);
         }
     }
 }

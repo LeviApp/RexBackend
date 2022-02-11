@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Rex.Models;
 using Rex.Data;
+using AutoMapper;
+using Rex.Dtos;
 
 namespace Rex.Controllers
 {
@@ -10,26 +12,45 @@ namespace Rex.Controllers
     public class LessonsController : ControllerBase
     {
         private readonly IRexRepo _repo;
+        private readonly IMapper _mapper;
 
-        public LessonsController(IRexRepo repo)
+        public LessonsController(IRexRepo repo, IMapper mapper)
         {
             _repo = repo;
+            _mapper = mapper;
         }
         // private readonly MockRexRepo _repo = new MockRexRepo();
         [HttpGet]
-        public ActionResult <IEnumerable<Lesson>> GetAllLessons()
+        public ActionResult <IEnumerable<LessonReadDto>> GetAllLessons()
         {
             var lessonItems = _repo.GetLessons();
 
-            return Ok(lessonItems);
+            return Ok(_mapper.Map<IEnumerable<LessonReadDto>>(lessonItems));
         }
 
-        [HttpGet("{id}")]
-        public ActionResult <Lesson> GetIndividualLesson(int id)
+        [HttpGet("{id}", Name="GetIndividualLesson")]
+        public ActionResult <LessonReadDto> GetIndividualLesson(int id)
         {
             var lessonItem = _repo.GetIndividualLesson(id);
 
-            return Ok(lessonItem);
+            if (lessonItem != null)
+            {
+                return Ok(_mapper.Map<LessonReadDto>(lessonItem));
+            }
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        public ActionResult <LessonReadDto> CreateIndividualLesson(LessonCreateDto lessonCreateDto)
+        {
+            var lessonModel = _mapper.Map<Lesson>(lessonCreateDto);
+            _repo.CreateLesson(lessonModel);
+            _repo.SaveChanges();
+
+            var lessonReadDto = _mapper.Map<LessonReadDto>(lessonModel);
+
+            return CreatedAtRoute(nameof(GetIndividualLesson), new {Id = lessonReadDto.LessonNumber}, lessonCreateDto);
         }
     }
 }

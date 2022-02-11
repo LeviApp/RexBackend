@@ -1,11 +1,11 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-namespace Rex.Models
+
+namespace Rex.Dtos
 {
-    public record Lesson
+    public record LessonReadDto
     {
-        // [Key]
+        [Key]
         public int LessonId { get; init; }
 
         [Required]

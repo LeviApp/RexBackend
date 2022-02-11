@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3z96L3nLmxIl2a12/7vkhfcZyWE2nNF1EFZ0wxPY9VIU7n6f07May3B7hlcviOYrENzZ5ggN+e+v+7hb41s5aA==",
+  "dgSpecHash": "0OjIEVOORmVHzC/WwPK/MnciTQbsb4Ed96eAyoy28kN/hdeOvVKYwkH5VmZBG/M2BPo7o1c5Ta0gWDgYQMpnFQ==",
   "success": true,
   "projectFilePath": "/Users/leviapp/Desktop/4444/Projects/Rex/Rex.csproj",
   "expectedPackageFiles": [
+    "/Users/leviapp/.nuget/packages/automapper/11.0.0/automapper.11.0.0.nupkg.sha512",
+    "/Users/leviapp/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/microsoft.entityframeworkcore/5.0.1/microsoft.entityframeworkcore.5.0.1.nupkg.sha512",
@@ -16,11 +18,11 @@
     "/Users/leviapp/.nuget/packages/microsoft.extensions.caching.memory/5.0.0/microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/microsoft.extensions.configuration.abstractions/5.0.0/microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/microsoft.extensions.dependencyinjection/5.0.1/microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
-    "/Users/leviapp/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/5.0.0/microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "/Users/leviapp/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/microsoft.extensions.logging/5.0.0/microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
-    "/Users/leviapp/.nuget/packages/microsoft.extensions.options/5.0.0/microsoft.extensions.options.5.0.0.nupkg.sha512",
-    "/Users/leviapp/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "/Users/leviapp/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/leviapp/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/npgsql/5.0.1.1/npgsql.5.0.1.1.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/npgsql.entityframeworkcore.postgresql/5.0.1/npgsql.entityframeworkcore.postgresql.5.0.1.nupkg.sha512",
@@ -31,7 +33,7 @@
     "/Users/leviapp/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/Users/leviapp/.nuget/packages/system.diagnostics.diagnosticsource/5.0.0/system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
-    "/Users/leviapp/.nuget/packages/system.runtime.compilerservices.unsafe/4.6.0/system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    "/Users/leviapp/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

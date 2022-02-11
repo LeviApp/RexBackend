@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Rex.Data;
 using Microsoft.EntityFrameworkCore;
-
+using AutoMapper;
 
 namespace Rex
 {
@@ -33,6 +33,7 @@ namespace Rex
 
             services.AddControllers();
 
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             // services.AddScoped<IRexRepo, MockRexRepo>();
 
             services.AddScoped<IRexRepo, PostRexRepo>();
