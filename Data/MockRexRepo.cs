@@ -50,6 +50,11 @@ namespace Rex.Data
         {
             throw new System.NotImplementedException();
         }
+
+        public void UpdateLesson(Lesson less)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
 

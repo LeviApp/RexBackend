@@ -38,5 +38,10 @@ namespace Rex.Data
         {
             return (_context.SaveChanges() >= 0);
         }
+
+        public void UpdateLesson(Lesson less)
+        {
+           // Nothing to do here
+        }
     }
 }
