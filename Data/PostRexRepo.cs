@@ -24,6 +24,16 @@ namespace Rex.Data
             _context.Lessons.Add(less);
         }
 
+        public void DeleteLesson(Lesson less)
+        {
+            if (less == null) 
+            {
+                throw new ArgumentNullException(nameof(less));
+            }
+            
+            _context.Lessons.Remove(less);        
+        }
+
         public Lesson GetIndividualLesson(int id)
         {
             return _context.Lessons.FirstOrDefault(l => l.LessonNumber == id);

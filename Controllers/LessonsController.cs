@@ -100,5 +100,21 @@ namespace Rex.Controllers
             return NoContent();
         }
 
+        [HttpDelete("{id}")]
+        public ActionResult DeleteLesson(int id)
+        {
+            var repoLesson = _repo.GetIndividualLesson(id);
+
+            if (repoLesson == null) {
+                return NotFound();
+            }
+
+            _repo.DeleteLesson(repoLesson);
+
+            _repo.SaveChanges();
+
+            return NoContent();
+        }
+
     }
 }
