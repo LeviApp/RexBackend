@@ -16,11 +16,11 @@ namespace Rex.Models
         public string LessonTitle {get; init;}
 
         [Required]
-        [MaxLength(1000)]
+        [MaxLength(2000)]
         public string LessonMain {get; init;}
 
         [Required]
-        [MaxLength(1000)]
+        [MaxLength(2000)]
         public string LessonChallenge {get; init;}
 
         [Required]
